@@ -16,6 +16,9 @@ RUN dotnet restore "src/Ray.BiliBiliTool.Console/Ray.BiliBiliTool.Console.csproj
 COPY . .
 WORKDIR "/code/src/Ray.BiliBiliTool.Console"
 RUN dotnet build "Ray.BiliBiliTool.Console.csproj" -c Release -o /app/build
+ENV Ray_DailyTaskConfig__IsWatchVideo=true
+ENV Ray_DailyTaskConfig__IsShareVideo=true
+ENV Ray_DailyTaskConfig__NumberOfCoins=2
 
 FROM build AS publish
 RUN dotnet publish "Ray.BiliBiliTool.Console.csproj" -c Release -o /app/publish
