@@ -19,7 +19,6 @@ RUN dotnet build "Ray.BiliBiliTool.Console.csproj" -c Release -o /app/build
 ENV Ray_DailyTaskConfig__IsWatchVideo=true
 ENV Ray_DailyTaskConfig__IsShareVideo=true
 ENV Ray_DailyTaskConfig__NumberOfCoins=2
-ENV Ray_DailyTaskConfig__Cron=0 45 9 * *
 FROM build AS publish
 RUN dotnet publish "Ray.BiliBiliTool.Console.csproj" -c Release -o /app/publish
 
