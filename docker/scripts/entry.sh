@@ -53,7 +53,7 @@ cron
 echo -e "=>完成\n"
 
 echo "[step 4/4]初始运行，尝试测试Cookie"
-cd /app && dotnet Ray.BiliBiliTool.Console.dll --runTasks=Test
+cd /app && dotnet Ray.BiliBiliTool.Console.dll --runTasks=Daily
 echo -e "=>完成\n"
 
 echo -e "[step 全部已完成]\n"
